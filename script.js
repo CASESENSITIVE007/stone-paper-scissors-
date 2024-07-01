@@ -63,35 +63,35 @@ let game_logic=()=>{
     let winner="";
   
      if(user==="rock" && opponent==="paper"){
-        winner="YOU";
+        winner="YOU WIN";
         score_opponent+=1;
      }
      else if(user==="rock" && opponent==="scissor"){
-        winner="YOU";
+        winner="YOU WIN";
         score_user+=1;
      }
      else if(user==="paper" && opponent==="rock"){
-        winner="YOU";
+        winner="YOU WIN";
         score_user+=1;
      }
      else if(user==="paper" && opponent==="scissor"){
-        winner="Opponent";
+        winner="YOU LOOSE";
         score_opponent+=1;
      }
      else if(user==="scissor" && opponent==="rock"){
-        winner="Opponent";
+        winner="YOU LOOSE";
         score_opponent+=1;
      }
      else if(user==="scissor" && opponent==="paper"){
-        winner="YOU";
+        winner="YOU WIN";
         score_user+=1;
     
      }
      else{
-        winner="No-one";
+        winner="DRAW";
      }
 
      document.querySelector(".user_score").innerText=`User Score ${score_user}`
      document.querySelector(".comp_score").innerText=`Computer Score ${score_opponent}`
-     document.querySelector(".info").innerText=`Computer:${opponent} \n YOU:${user} \n The winner is ${winner}`
+     document.querySelector(".info").innerText=`Computer:${opponent} \n YOU:${user} \n ${winner}`
 }
