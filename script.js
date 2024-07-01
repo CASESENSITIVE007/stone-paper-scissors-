@@ -88,7 +88,7 @@ let game_logic=()=>{
     
      }
      else{
-        winner="draw";
+        winner="No-one";
      }
 
      document.querySelector(".user_score").innerText=`User Score ${score_user}`
